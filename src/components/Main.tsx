@@ -6,10 +6,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 const Main = () => {
   useEffect(() => {
     loadSVG();
-  }, []);
+  });
 
   const loadSVG = () => {
-    fetch('/city.svg')
+    fetch(`${import.meta.env.BASE_URL}city.svg`)
       .then((response) => response.text())
       .then((svg) => {
         const bgCity = document.getElementById('bgCity');
